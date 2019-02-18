@@ -13,7 +13,7 @@ public class TestingClass {
 	ShoppingCard sc;
 
 	@Before public void initiate() {
-	    sc = new ShoppingCard();
+	     sc = new ShoppingCard();
 	}
 	@Test public void createSC() {
 		
