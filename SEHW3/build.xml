@@ -18,6 +18,10 @@
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
 
+<target name="compile">
+ <javac fork="yes" srcdir="./src" destdir="build-eclipse-compiler" />
+</target>
+
 <path id="NecessaryLibraries">
         <pathelement location="./UsedLibraries/junit-4.12.jar"/>
         <!--matcher-->
