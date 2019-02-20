@@ -23,7 +23,7 @@
  <javac fork="yes" srcdir="./src" destdir="./buildDst" >
  <classpath>
                 
-                <path refid="JUnit 4.libraryclasspath"/>
+                <path refid="NecessaryLibraries"/>
                 <pathelement location="${result.javaclasses.dir}"/>
             </classpath>
  	</javac>
@@ -35,7 +35,7 @@
         <pathelement location="./UsedLibraries/junit-4.12.jar"/>
         
         <pathelement location="./UsedLibraries/hamcrest-core-1.3.jar"/>
-        <pathelement location="./UsedLibraries/jacocoant.jar"/>
+       <!-- <pathelement location="./UsedLibraries/jacocoant.jar"/>-->
     </path>
     
         
@@ -44,7 +44,7 @@
         <javac srcdir="./src"  destdir="${result.testclasses.dir}" debug="true" includeantruntime="false">
         	<classpath>
         	                
-        	                <path refid="JUnit 4.libraryclasspath"/>
+        	                <path refid="NecessaryLibraries"/>
         	                <pathelement location="${result.javaclasses.dir}"/>
         	            </classpath>
         </javac> 
@@ -63,8 +63,8 @@
         <junit printsummary="true" haltonfailure="true" fork="true">
         	<classpath>
         	                
-        	                <path refid="JUnit 4.libraryclasspath"/>
-        	                
+        	                <path refid="NecessaryLibraries"/>
+        	            	
                 <pathelement location="${result.javaclasses.dir}"/>
                 <pathelement location="${result.testclasses.dir}"/>
             </classpath>
