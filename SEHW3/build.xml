@@ -19,7 +19,7 @@
     </path>
 
 <target name="compile">
- <javac fork="yes" srcdir="./src" destdir="./buildDst" />
+ <javac fork="yes" srcdir="./src" destdir="C:\Users\ShutDowner007\git\hw3SE\SEHW3\buildDst" />
 </target>
 
 <path id="NecessaryLibraries">
