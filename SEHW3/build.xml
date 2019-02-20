@@ -19,7 +19,7 @@
     </path>
 
 <target name="compile">
- <javac fork="yes" srcdir="./src" destdir="build-eclipse-compiler" />
+ <javac fork="yes" srcdir="./src" destdir="buildDst" />
 </target>
 
 <path id="NecessaryLibraries">
