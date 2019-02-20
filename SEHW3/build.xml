@@ -47,9 +47,17 @@
         	                <path refid="JUnit 4.libraryclasspath"/>
         	                <pathelement location="${result.javaclasses.dir}"/>
         	            </classpath>
-        </javac>        
+        </javac> 
+    	<jar destfile="${app.jar.dir}/${app.jar.name}" basedir="${app.classes.dir}">
+    	              	            <manifest>
+    	              	                <attribute name="Main-Class" value="${app.jar.main-class}" />
+    	              	            </manifest>
+    	              	        </jar>
     </target>
     
+              	 
+
+              	
     <target name="test" depends="compile-testcases">
        
         <junit printsummary="true" haltonfailure="true" fork="true">
@@ -84,7 +92,7 @@
         <delete dir="bin"/>
     </target>
     <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
+<!--    <target depends="build-subprojects,build-project" name="build"/>
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
@@ -107,6 +115,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+    -->
     <target name="TestingClass">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
